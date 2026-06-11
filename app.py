@@ -81,7 +81,14 @@ def ingest_corpus() -> None:
             st.session_state.ingested_files.add(path.name)
         except ValueError as exc:
             st.error(f"Could not ingest {path.name}: {exc}")
+        except Exception:
+            st.error(
+                f"Indexing failed for {path.name}. Check that the OpenAI "
+                "API key is valid and the account has available credit."
+            )
+            return
     st.success("Pre-loaded corpus indexed.")
+
 
 def page_home() -> None:
     """Homepage: what the tool is, who it's for, how to use it."""
