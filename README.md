@@ -1,3 +1,5 @@
+## LIVE DEMO URL
+https://emergency-protocol.streamlit.app/
 
 1. The Streamlit UI (`app.py`) accepts document uploads and user questions.
 2. `DocumentIngestor` (`rag/ingestion.py`) parses PDF/TXT/MD files, cleans the text, and splits it into 1000-character chunks with 200-character overlap.
@@ -62,4 +64,4 @@ emergency-protocol/
 
 ## Corpus
 
-Place text-based PDF, TXT, or MD files in `data/corpus/`
+Place text-based PDF, TXT, or MD files in `data/corpus`
